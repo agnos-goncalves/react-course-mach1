@@ -104,14 +104,14 @@ module.exports = {
   "serve": "webpack serve"
 ```
 
-## instalando o babel para transpilar o codigo
+## Instalando o babel para transpilar o codigo
 
 ```sh
 npm install -D babel-loader @babel/core @babel/preset-env @babel/preset-react
 @babel/preset-env @babel/plugin-proposal-class-properties @babel/plugin-transform-react-jsx
 ```
 
-## antes de executar o projeto vamos criar o seguinte arquivo public/index.html
+## Antes de executar o projeto vamos criar o seguinte arquivo public/index.html
 
 ```html
 <!DOCTYPE html>
