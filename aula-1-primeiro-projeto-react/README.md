@@ -128,3 +128,16 @@ npm install -D babel-loader @babel/core @babel/preset-env @babel/preset-react
   </body>
 </html>
 ```
+
+## Agora executamos
+
+```sh
+npm run serve
+```
+
+### Links E Referencias
+
+-- [WEPPACK](https://reactjs.org/docs/getting-started.html)
+-- [NODE](https://nodejs.org/en/docs/)
+-- [NPM](https://docs.npmjs.com/)
+-- [WEPPACK](https://webpack.js.org/concepts/)
