@@ -3,9 +3,8 @@
 1. Através dos comandos aprendidos na aula, crie um projeto REACT em seu computador chamado <b>pagina-de-apresentacao</b>.
 
 2. Agora remova todo o conteúdo que vem na inicialização da sua aplicação e crie um componente para o header da sua página:
-
-- Nesse componente inclua seu nome.
-- Formate utilizando CSS para customizar a estilização.
+   -- Nesse componente inclua seu nome.
+   -- Formate utilizando CSS para customizar a estilização.
 
 3. Crie um componente para adicionar o <b>texto</b>abaixo, que será renderizado logo abaixo do header:
 
