@@ -13,7 +13,7 @@
 
 # PARTE 2
 
-4. Criar uma Lista de Itens
+4. Criar uma <b>LISTA</b> de Itens
 
 - Criar um componente <b>LISTA</b> usando tag ul
 
@@ -23,4 +23,4 @@
 
 - O componente <b>ITEM</b> deve ter a propriedade ativo(true ou false) quando verdadeiro a cor de fundo do item deve mudar e ficar em destaque
 
-- O componente Lista deve ter a propriedade <b>textos</b> (home, sobre, contato) e cada <b>texto</b>deve ser passado para um componente <b>ITEM</b> dentro do componente <b>LISTA</b>
+- O componente <b>LISTA</b> deve ter a propriedade <b>textos</b> (home, sobre, contato) e cada <b>texto</b>deve ser passado para um componente <b>ITEM</b> dentro do componente <b>LISTA</b>
