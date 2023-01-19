@@ -1,0 +1,15 @@
+Fogo
+forte contra planta 
+fraco contra agua
+
+Agua 
+forte contra fogo
+fraco contra eletrico
+
+Planta 
+forte contra agua
+fraco contra foco
+
+Eletrico
+forte contra agua
+fraco contra planta
