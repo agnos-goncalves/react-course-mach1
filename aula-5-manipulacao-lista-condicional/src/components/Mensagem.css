@@ -1,0 +1,12 @@
+.mensagem-info {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #f2f2f2;
+}
+.mensagem-info.error {
+  color: red;
+}
+
+.mensagem-info.sucesso {
+  color: green;
+}
