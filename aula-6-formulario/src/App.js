@@ -4,7 +4,10 @@ import "./App.css";
 function App() {
   const enviarDados = (e) => {
     e.preventDefault();
-    console.log("GET DATA FORM", e.target);
+    const form = new FormData(e.target);
+    for (const key of form.keys()) {
+      console.log("campo:", key, "valor:", form.get(key));
+    }
   };
   return (
     <div className="App">
