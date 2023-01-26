@@ -1,19 +1,13 @@
 /* eslint-disable no-useless-escape */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Message from "./Message";
 import "./style.css";
 
 function invalidoNome(nome) {
-  if (nome.length >= 3) {
-    return false;
-  }
-  return true;
+  return nome.length <= 3;
 }
 function invalidaSenha(senha) {
-  if (senha.length >= 4) {
-    return false;
-  }
-  return true;
+  return senha.length <= 4;
 }
 function invalidoEmail(email) {
   return !email.match(
@@ -30,14 +24,17 @@ function Form() {
     nome: {
       valor: "",
       invalido: false,
+      exibirMensagem: true,
     },
     email: {
       valor: "",
       invalido: false,
+      exibirMensagem: true,
     },
     senha: {
       valor: "",
       invalido: false,
+      exibirMensagem: true,
     },
   });
 
@@ -56,9 +53,27 @@ function Form() {
       [name]: {
         valor: value,
         invalido: invalido,
+        exibirMensagem: invalido,
       },
     });
-
+  };
+  const removerMensagem = (e) => {
+    const { name } = e.target;
+    setFormData({
+      ...formData,
+      [name]: {
+        ...formData[name],
+        exibirMensagem: false,
+      },
+    });
+  };
+  const salvarDados = (e) => {
+    e.preventDefault();
+    if (formValido) {
+      console.log("pegar dados", formData);
+    }
+  };
+  useEffect(() => {
     // const camposValidos =
     //   formData.nome.invalido ||
     //   formData.email.invalido ||
@@ -69,18 +84,6 @@ function Form() {
 
     // setFormValido(!camposValidos);
 
-    if (
-      formData.nome.invalido ||
-      formData.email.invalido ||
-      formData.senha.invalido ||
-      formData.nome.valor === "" ||
-      formData.email.valor === "" ||
-      formData.senha.valor === ""
-    ) {
-      setFormValido(false);
-    } else {
-      setFormValido(true);
-    }
     // const listaValidacaoCampos = [
     //   formData.nome.invalido,
     //   formData.email.invalido,
@@ -88,23 +91,16 @@ function Form() {
     // ];
     // const todosCamposValidos = listaValidacaoCampos.every((campo) => campo);
     // setFormValido(todosCamposValidos);
-  };
-  const removerMensagem = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: {
-        valor: value,
-        invalido: false,
-      },
-    });
-  };
-  const salvarDados = (e) => {
-    e.preventDefault();
-    if (formValido) {
-      console.log("pegar dados", formData);
-    }
-  };
+
+    const temCampoInvalido =
+      formData.nome.invalido ||
+      formData.email.invalido ||
+      formData.senha.invalido ||
+      formData.nome.valor === "" ||
+      formData.email.valor === "" ||
+      formData.senha.valor === "";
+    setFormValido(!temCampoInvalido);
+  }, [formData]);
   return (
     <form action="" className="formulario" onSubmit={salvarDados}>
       <h4>{info.title}</h4>
@@ -117,7 +113,10 @@ function Form() {
           onFocus={removerMensagem}
           onChange={salvarValorCampo}
         />
-        <Message exibir={formData.nome.invalido} campo="Nome" />
+        <Message
+          exibir={formData.nome.exibirMensagem && formData.nome.invalido}
+          campo="Nome"
+        />
       </fieldset>
       <fieldset>
         <label>E-mail</label>
@@ -128,7 +127,10 @@ function Form() {
           onFocus={removerMensagem}
           onChange={salvarValorCampo}
         />
-        <Message exibir={formData.email.invalido} campo="Email" />
+        <Message
+          exibir={formData.email.exibirMensagem && formData.email.invalido}
+          campo="Email"
+        />
       </fieldset>
       <fieldset>
         <label>Senha</label>
@@ -139,7 +141,10 @@ function Form() {
           onFocus={removerMensagem}
           onChange={salvarValorCampo}
         />
-        <Message exibir={formData.senha.invalido} campo="Senha" />
+        <Message
+          exibir={formData.senha.exibirMensagem && formData.senha.invalido}
+          campo="Senha"
+        />
       </fieldset>
       <input type="submit" value="Registrar" disabled={!formValido} />
     </form>
