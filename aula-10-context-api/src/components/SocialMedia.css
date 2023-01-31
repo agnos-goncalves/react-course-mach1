@@ -1,0 +1,10 @@
+.social-media {
+  background-color: aqua;
+  padding: 4px;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 10px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}

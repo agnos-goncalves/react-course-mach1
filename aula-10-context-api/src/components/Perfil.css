@@ -1,0 +1,13 @@
+.perfil {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 400px;
+  border: 1px solid #f3f3f3;
+  box-shadow: 1px 1px 1px #f3f3f3;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}

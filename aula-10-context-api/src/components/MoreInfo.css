@@ -1,0 +1,10 @@
+.more-info {
+  width: 100%;
+}
+.more-info-line:nth-of-type(even) {
+  background-color: #999999;
+}
+
+.more-info-line:nth-of-type(odd) {
+  background-color: #c2c2c2;
+}

@@ -1,0 +1,23 @@
+O que é contextAPI =======================
+O Context API é uma ferramenta do React que permite compartilhar estado entre componentes. Ele é usado para passar dados através da árvore de componentes sem precisar passar props manualmente entre componentes intermediários.
+
+Quando usar ===================
+Você deve usar o Context API quando precisar compartilhar estado entre componentes que não estão diretamente aninhados. O Context API permite que você acesse o estado em qualquer parte do aplicativo, sem precisar passar props manualmente em toda a árvore de componentes.
+
+Algumas situações comuns em que o Context API é útil incluem:
+
+Compartilhar estado global, como configurações de tema, idioma ou dados de usuário.
+
+Compartilhar estado entre componentes de níveis diferentes da árvore de componentes.
+
+Evitar o problema do "prop drilling", que ocorre quando você precisa passar props manualmente através de muitos componentes.
+
+Manter o estado fora do componente principal, tornando-o mais fácil de testar e manter.
+
+Em resumo, você deve usar o Context API quando precisar compartilhar estado entre componentes de maneira eficiente e simples. Mas lembre-se de que é uma ferramenta avançada e deve ser usada com moderação. É importante compreender bem como o Context API funciona antes de usá-lo em um aplicativo em produção.
+
+
+
+O que é pra que serve?
+mostrar aplicacoes de context API ?
+usando i18n? evitar problema de prop drilling
